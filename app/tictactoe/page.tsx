@@ -40,6 +40,8 @@ export default function Tictactoe() {
 
   const winner = calculateWinner(board);
   const status = winner ? `Winner: ${winner}` : `Next player: ${isXNext ? "X" : "O"}`;
+  const isGameOver = winner !== null;
+
 
   return (
     <div className={styles.game}>
@@ -48,8 +50,9 @@ export default function Tictactoe() {
         {board.map((value, index) => (
           <button
             key={index}
-            className={styles.cell}
+            className={`${styles.cell} ${isGameOver ? styles.disabled : ""}`}
             onClick={() => handleClick(index)}
+            disabled={isGameOver} // Disable clicking when game is over
           >
             {value}
           </button>
