@@ -1,3 +1,27 @@
-.hey {
-  font-size: 3rem;
+.imageTitle {
+  color: #2258cd;
+  font-style: italic;
+}
+
+.gradientDivider {
+  height: 2px; /* Slightly thicker for emphasis */
+  background: linear-gradient(to right, #2258cd, #2258cd); /* Your specified color */
+  margin: 30px 0; /* Space around the divider */
+  border-radius: 50px; /* Rounded edges for a modern look */
+}
+
+.siteFooter {
+  background-color: #23378a; /* Dark background for contrast */
+  color: #f1f1f1; /* Light text color */
+  padding: 10px 0;
+  text-align: center;
+  font-size: 16px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footerContent p {
+  text-decoration: none;
+  margin: 0 5px;
 }
