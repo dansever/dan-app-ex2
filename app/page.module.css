@@ -1,0 +1,21 @@
+.imageContainer {
+    display: flex;
+    height: auto;
+    gap: 20px; /* Space between images */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Align images vertically */
+  }
+
+  .link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep link text color the same as surrounding text */
+  }
+  
+  .link:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  .highlight {
+    font-weight: bold; /* Make "Link to part X" stand out */
+    color: #2258cd; /* Use an accent color for emphasis */
+  }

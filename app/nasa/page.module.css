@@ -1,3 +1,21 @@
+.header {
+  display: flex;
+  color: White;
+  flex-direction: row;
+  align-items: center;
+}
+
+.inputContainer {
+  margin-top: 0px;
+}
+
+.input {
+  padding: 5px;
+  font-size: 16px;
+  width: 80px;
+}
+
+
 .imageTitle {
   color: #2258cd;
   font-style: italic;

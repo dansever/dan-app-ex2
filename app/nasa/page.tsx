@@ -12,7 +12,7 @@ export default function NasaApod() {
     // Fetch data when the component mounts
     const fetchData = async () => {
       try {
-        const data = await getData(6);
+        const data = await getData(4);
         console.log("Fetched APOD Data");
         setApodData(data);
       } catch (error) {
