@@ -34,7 +34,7 @@ export default function Home() {
             </a>
           </h3>
           <h3>
-            <a href="./design" className={styles.link}>
+            <a href="./design/login" className={styles.link}>
               <span className={styles.highlight}>Link to part 3: </span>
               Design to code
             </a>
