@@ -34,7 +34,7 @@ export default function Demos() {
           <Link href="./home" className={styles.LinkBox}>
             <button className={styles.submitButton} 
             type="button">
-            Let's Go!
+            {"Let's Go!"}
             </button>
           </Link>
 
