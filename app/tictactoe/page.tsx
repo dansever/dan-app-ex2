@@ -24,12 +24,16 @@ export default function Tictactoe() {
 
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
-      if (board[a] &&
-         board[a] === board[b] &&
-         board[a] === board[c]) {
+      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
         return board[a];
       }
     }
+
+    // Check for a tie
+    if (board.every(cell => cell !== "")) {
+      return "Tie"; // If all cells are filled and no winner, it's a tie
+    }
+
     return null; // No winner
   };
 
@@ -39,7 +43,11 @@ export default function Tictactoe() {
   };
 
   const winner = calculateWinner(board);
-  const status = winner ? `Winner: ${winner}` : `Next player: ${isXNext ? "X" : "O"}`;
+  const status = winner
+    ? winner === "Tie"
+      ? "It's a Tie..."
+      : `Winner: ${winner}`
+    : `Next player: ${isXNext ? "X" : "O"}`;
   const isGameOver = winner !== null;
 
 
@@ -58,7 +66,7 @@ export default function Tictactoe() {
           </button>
         ))}
       </div>
-      {winner && (
+      {(winner === "Tie" || winner) && (
         <button className={styles.resetButton} onClick={resetGame}>
           Reset Game
         </button>

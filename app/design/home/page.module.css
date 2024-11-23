@@ -1,0 +1,63 @@
+/* Import Geist Mono font */
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.main {
+  background-image: url('/login_page_background.png'); /* Path relative to the public folder */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Ensures flexbox behavior for children */
+  flex-direction: column; /* Stack children vertically */
+  font-family: 'Space Mono', sans-serif;  /* Apply Space Mono to h3 elements */
+  
+}
+
+.main h2{
+  font-family: 'Space Mono',  sans-serif; 
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Each section will take equal height */
+.headerSection {
+  display: flex;
+  justify-content: flex-start; /* Align to right */
+}
+
+.imageSection {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sock_logo {
+  width: 20%;
+}
+
+.ButtonSection {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.LinkBox {
+  width: 35%;
+}
+
+.submitButton {
+  background-color: #FACED7;
+  border: 2px solid #7f7f7f;  /* Added border width and color */
+  color: #7f7f7f;
+  border-radius: 90px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 8%;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #feb3c2;
+  font-weight: bold;
+}

@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Link from 'next/link';
 
 export default function Demos() {
 
@@ -29,7 +30,14 @@ export default function Demos() {
             />
             <p>Forgot password?</p>
           </div>
-          <button className={styles.submitButton} type="submit"> Let's Go!</button>
+
+          <Link href="./home" className={styles.LinkBox}>
+            <button className={styles.submitButton} 
+            type="button">
+            Let's Go!
+            </button>
+          </Link>
+
         </form>        
       </div>
     </main>

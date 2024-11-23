@@ -20,6 +20,10 @@
   margin-bottom: 20px;
 }
 
+.sock_logo {
+  width: 20%;
+}
+
 .main h2{
   font-family: 'Space Mono',  sans-serif; 
   font-size: 24px;
@@ -73,6 +77,10 @@
   color: white;
 }
 
+.LinkBox {
+  width: 35%;
+}
+
 .submitButton {
   background-color: #FACED7;
   border: 2px solid #7f7f7f;  /* Added border width and color */
@@ -80,11 +88,12 @@
   border-radius: 90px;
   font-size: 20px;
   cursor: pointer;
-  width: 50%;
+  width: 100%;
   margin-top: 8%;
   transition: background-color 0.3s ease;
 }
 
 .submitButton:hover {
-  background-color: #0056b3;
+  background-color: #feb3c2;
+  font-weight: bold;
 }
