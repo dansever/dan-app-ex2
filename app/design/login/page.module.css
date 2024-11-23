@@ -6,7 +6,7 @@
   background-size: cover; /* Ensures the image covers the entire background */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center; /* Centers the image */
-  height: 100vh; /* Full viewport height */
+  height: 70vh; /* Full viewport height */
   padding-left: 20px;
   padding-top: 10px;
   display: flex; /* Ensures flexbox behavior for children */
@@ -37,7 +37,7 @@
 
 
 .mainContainer{
-  height: 60%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
