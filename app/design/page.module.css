@@ -1,3 +1,90 @@
-.hey {
-  font-size: 3rem;
+/* Import Geist Mono font */
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.main {
+  background-image: url('/login_page_background.png'); /* Path relative to the public folder */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  height: 100vh; /* Full viewport height */
+  padding-left: 20px;
+  padding-top: 10px;
+  display: flex; /* Ensures flexbox behavior for children */
+  flex-direction: column; /* Stack children vertically */
+  font-family: 'Space Mono', sans-serif;  /* Apply Space Mono to h3 elements */
+}
+
+/* Logo styling */
+.logo {
+  width: 50%; /* Make the logo smaller */
+  margin-bottom: 20px;
+}
+
+.main h2{
+  font-family: 'Space Mono',  sans-serif; 
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.main h3{
+  font-family: 'Space Mono',  sans-serif; 
+  font-size: 20px;
+}
+
+
+.mainContainer{
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inputContainer {
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  width: 100%;
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.input {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 1px;
+  font-size: 14px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  color: black
+}
+
+.inputGroup {
+  width: 100%;
+  color: white;
+}
+
+.submitButton {
+  background-color: #FACED7;
+  border: 2px solid #7f7f7f;  /* Added border width and color */
+  color: #7f7f7f;
+  border-radius: 90px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 50%;
+  margin-top: 8%;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
 }
