@@ -1,21 +1,39 @@
-.imageContainer {
-    display: flex;
-    height: auto;
-    gap: 20px; /* Space between images */
-    justify-content: center; /* Center images horizontally */
-    align-items: center; /* Align images vertically */
+.imageContainer { 
+  display: flex; 
+  height: auto; 
+  gap: 20px; /*Space between images */
+  justify-content: center; /*Center images horizontally */
+  align-items: center; /*Align images vertically */
+}
+
+.link {
+  text-decoration: none; /*Remove underline */
+  color: inherit; /*Keep link text color the same as surrounding text */
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 10px;
+}
+
+.link:hover {
+  text-decoration: underline; /*Add underline on hover */
+}
+
+.highlight {
+  font-weight: bold; /*Make "Link to part X" stand out */
+  color: #2258cd; /*Use an accent color for emphasis */
   }
 
-  .link {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Keep link text color the same as surrounding text */
+.icon {
+  font-size: 80px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
   }
-  
-  .link:hover {
-    text-decoration: underline; /* Add underline on hover */
+  50% {
+    transform: translateY(-5px);
   }
-  
-  .highlight {
-    font-weight: bold; /* Make "Link to part X" stand out */
-    color: #2258cd; /* Use an accent color for emphasis */
-  }
+}

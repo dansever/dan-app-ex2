@@ -1,16 +1,23 @@
+"use client"
 import styles from "./page.module.css";
-import Link from 'next/link';
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import React, { useState } from 'react';
 
-export default function Demos() {
+export default function SockTimeLogin() {
+  const router = useRouter();
+  const [IsLoggedIn, setIsLoggedIn] = useState(false);
 
+  const handleLogin = (event: { preventDefault: () => void; }) => {
+    event.preventDefault();
+    setIsLoggedIn(true);
+    router.push('./home'); // Navigate to "./home"
+  };
+  
   return (
     <main className={styles.main}>
       
-      <img
-        className={styles.logo}
-        src="/sock_time_logo.png" 
-        alt="Sock Time Logo" 
-      />
+      <img className={styles.logo} src="/sock_time_logo.png"  alt="Sock Time Logo" />
 
       <div className={styles.mainContainer}>
 
@@ -21,20 +28,22 @@ export default function Demos() {
 
         <form className={styles.form}>
           <input
-            className={styles.input} type="email" id="email" name="email" placeholder="Enter your email"
+            className={styles.input} type="email" id="email" placeholder="enteryouremail@gmail.com"
             required
           />
           <div className={styles.inputGroup}>
             <input 
-              className={styles.input} type="password" id="password" name="password" placeholder="password"
+              className={styles.input} type="password" id="password" placeholder="password"
               required
             />
             <p>Forgot password?</p>
           </div>
 
           <Link href="./home" className={styles.LinkBox}>
-            <button className={styles.submitButton} 
-            type="button">
+            <button 
+              className={styles.submitButton}
+              onClick={handleLogin}
+              type="button">
             {"Let's Go!"}
             </button>
           </Link>

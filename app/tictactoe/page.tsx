@@ -15,26 +15,23 @@ export default function Tictactoe() {
     setIsXNext(!isXNext);
   };
 
-   // Function to calculate the winner
-   const calculateWinner = (board: Array<string | null>): string | null => {
+    // Function to calculate the winner
+  const calculateWinner = (board: Array<string | null>): string | { winner: string, line: number[] } | null => {
     const lines = [
-      [0, 1, 2],[3, 4, 5],[6, 7, 8],
-      [0, 3, 6],[1, 4, 7],[2, 5, 8],
-      [0, 4, 8],[2, 4, 6]];
-
+      [0, 1, 2], [3, 4, 5], [6, 7, 8],
+      [0, 3, 6], [1, 4, 7], [2, 5, 8],
+      [0, 4, 8], [2, 4, 6]
+    ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
       if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-        return board[a];
+        return { winner: board[a], line: [a, b, c] }; // Return winner and the winning line
       }
     }
-
-    // Check for a tie
     if (board.every(cell => cell !== "")) {
-      return "Tie"; // If all cells are filled and no winner, it's a tie
+      return "Tie";
     }
-
-    return null; // No winner
+    return null;
   };
 
   const resetGame = () => {
@@ -42,14 +39,15 @@ export default function Tictactoe() {
     setIsXNext(true); // Set X to play first
   };
 
-  const winner = calculateWinner(board);
+  const winnerData = calculateWinner(board);
+  const winner = winnerData ? winnerData.winner : null;
+  const winningLine = winnerData ? winnerData.line : [];
   const status = winner
     ? winner === "Tie"
       ? "It's a Tie..."
       : `Winner: ${winner}`
     : `Next player: ${isXNext ? "X" : "O"}`;
   const isGameOver = winner !== null;
-
 
   return (
     <div className={styles.game}>
@@ -58,7 +56,7 @@ export default function Tictactoe() {
         {board.map((value, index) => (
           <button
             key={index}
-            className={`${styles.cell} ${isGameOver ? styles.disabled : ""}`}
+            className={`${styles.cell} ${isGameOver ? styles.disabled : ""} ${winningLine.includes(index) ? styles.winnerCell : ""}`}
             onClick={() => handleClick(index)}
             disabled={isGameOver} // Disable clicking when game is over
           >

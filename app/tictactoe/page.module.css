@@ -41,7 +41,15 @@
   cursor: not-allowed; /* Disable cursor pointer */
 }
 
+/* Highlight the winning cells */
+.winnerCell {
+  background-color: #ffcc00; /* Highlight color */
+  color: #fff; /* Make the text stand out */
+  font-weight: bold;
+  transition: background-color 0.3s; /* Smooth transition */
+}
 
+/* Reset button styles */
 .resetButton {
   margin-top: 20px;
   padding: 10px 20px;

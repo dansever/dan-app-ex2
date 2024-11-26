@@ -1,5 +1,13 @@
 import styles from "./page.module.css";
 import Image from "next/image";
+import { GiTicTacToe } from "react-icons/gi";
+import { FaSpaceAwesome } from "react-icons/fa6";
+import { LuFigma } from "react-icons/lu";
+
+
+
+import { faGamepad, faRocket, faPalette } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Home() {
   return (
@@ -18,29 +26,35 @@ export default function Home() {
             width="80" height="80"
             priority/>
         </div>
-        <br></br>
+        <br/>
         
-        <div>
-          <h3>
+        <div className={styles.linksContainer}>
+
+          <h3 className={styles.linkItem}>
             <a href="./tictactoe" className={styles.link}>
+              <GiTicTacToe className={styles.icon}/>
               <span className={styles.highlight}>Link to part 1: </span> 
               React TicTacToe
             </a>
           </h3>
-          <h3>
+
+          <h3 className={styles.linkItem}>
             <a href="./nasa" className={styles.link}>
-              <span className={styles.highlight}>Link to part 2: </span>
+              <FaSpaceAwesome className={styles.icon}/>
+              <span className={styles.highlight}>Link to part 2: </span> 
               Working with data - NASA API
             </a>
           </h3>
-          <h3>
+
+          <h3 className={styles.linkItem}>
             <a href="./design/login" className={styles.link}>
+              <LuFigma className={styles.icon}/>
               <span className={styles.highlight}>Link to part 3: </span>
               Design to code
             </a>
           </h3>
-        </div>        
 
+        </div>
       </div>
     </main>
   );

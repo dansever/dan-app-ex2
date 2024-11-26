@@ -6,13 +6,21 @@
   background-size: cover; /* Ensures the image covers the entire background */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center; /* Centers the image */
-  height: 75vh; /* Full viewport height */
+
+  width: 100%;
+  min-height: 600px;
+  max-height: 1000px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column; 
+
+  height: 75vh;
   padding-left: 20px;
-  padding-top: 10px;
-  display: flex; /* Ensures flexbox behavior for children */
-  flex-direction: column; /* Stack children vertically */
+  padding-top: 10px; 
+
   font-family: 'Space Mono', sans-serif;  /* Apply Space Mono to h3 elements */
 }
+
 
 .main h2{
   font-family: 'Space Mono',  sans-serif; 
