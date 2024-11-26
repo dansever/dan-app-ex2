@@ -6,7 +6,7 @@
   background-size: cover; /* Ensures the image covers the entire background */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center; /* Centers the image */
-  height: 80vh; /* Full viewport height */
+  height: 75vh; /* Full viewport height */
   padding-left: 20px;
   padding-top: 10px;
   display: flex; /* Ensures flexbox behavior for children */
@@ -20,22 +20,6 @@
   margin-bottom: 20px;
 }
 
-.sock_logo {
-  width: 20%;
-}
-
-.main h2{
-  font-family: 'Space Mono',  sans-serif; 
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.main h3{
-  font-family: 'Space Mono',  sans-serif; 
-  font-size: 20px;
-}
-
-
 .mainContainer{
   height: 100%;
   display: flex;
@@ -43,12 +27,16 @@
   justify-content: space-between;
 }
 
-.inputContainer {
-  height: auto;
-  display: flex;
-  justify-content: flex-end;
+.textBox h2{
+  font-family: 'Space Mono',  sans-serif; 
+  font-size: 24px;
+  font-weight: bold;
 }
 
+.textBox h3{
+  font-family: 'Space Mono',  sans-serif; 
+  font-size: 20px;
+}
 
 .form {
   display: flex;
@@ -60,7 +48,6 @@
   padding-left: 10px;
   padding-right: 10px;
 }
-
 
 .input {
   padding: 10px;

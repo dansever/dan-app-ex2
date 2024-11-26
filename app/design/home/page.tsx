@@ -16,9 +16,7 @@ export default function Demos() {
       
       <div className={styles.ButtonSection} id="3">
         <Link href="./home" className={styles.LinkBox}>
-          <button className={styles.submitButton} type="button">
-          Open Camera
-          </button>
+          <button type="button">Open Camera</button>
         </Link>
       </div>
 

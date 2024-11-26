@@ -48,11 +48,13 @@
 }
 
 .submitButton {
-  background-color: #FACED7;
-  border: 2px solid #7f7f7f;  /* Added border width and color */
-  color: #7f7f7f;
+  background-color: #eba4b2;
+  border: 2px solid white;  /* Added border width and color */
+  color: white;
   border-radius: 90px;
   font-size: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+
   cursor: pointer;
   width: 100%;
   margin-top: 8%;
