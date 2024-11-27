@@ -22,7 +22,6 @@
   padding-top: 10px; 
 
   font-family: 'Space Mono', sans-serif;  /* Apply Space Mono to h3 elements */
-
 }
 
 /* Logo styling */
@@ -32,7 +31,7 @@
 }
 
 .mainContainer{
-  height: 100%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
