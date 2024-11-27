@@ -15,7 +15,7 @@ export default function Tictactoe() {
     setIsXNext(!isXNext);
   };
 
-  // Function to calculate the winner
+  // Calculate the winner
   const calculateWinner = (board: Array<string | null>): string | { winner: string; line: number[] } | null => {
     const lines = [
       [0, 1, 2], [3, 4, 5], [6, 7, 8],
