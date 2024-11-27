@@ -28,11 +28,7 @@ export default function Tictactoe() {
         return { winner: board[a], line: [a, b, c] }; // Return winner and the winning line
       }
     }
-  
-    if (board.every((cell) => cell !== "")) {
-      return "Tie";
-    }
-  
+    if (board.every((cell) => cell !== "")) { return "Tie";}
     return null;
   };
   
