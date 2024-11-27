@@ -20,7 +20,8 @@
   margin: 0 auto; /* Center the container if needed */
 
   padding-left: 20px;
-  padding-top: 10px; 
+  padding-top: 10px;
+  padding-bottom: 20px; 
   font-family: 'Space Mono', sans-serif;  /* Apply Space Mono to h3 elements */
 }
 
